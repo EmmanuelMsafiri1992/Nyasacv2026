@@ -17,7 +17,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            REPOPATH=/home/indegnnk/Nyasacvrepo
+            REPOPATH=/home/indegnnk/Nyasacv2026Repo
             DEPLOYPATH=/home/indegnnk/nyasacv.com
 
             # Fix git safe directory issue
