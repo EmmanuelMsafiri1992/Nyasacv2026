@@ -1,0 +1,96 @@
+# ============================================================
+# SECURITY - Never commit these files
+# ============================================================
+.env
+.env.*
+.env.backup
+.env.local
+.env.production
+*.pem
+*.key
+*.crt
+*.p12
+credentials.json
+secrets.json
+auth.json
+
+# ============================================================
+# DEPLOYMENT - Exclude from server
+# ============================================================
+# IMPORTANT: Remove .git directory from server after deployment!
+# The .git folder should NEVER be accessible via web
+
+# Laravel & PHP
+/vendor/
+/node_modules/
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Laravel Storage
+/storage/*.key
+/storage/logs/*.log
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+!/storage/app/.gitkeep
+!/storage/framework/.gitkeep
+!/storage/logs/.gitkeep
+
+# Database - Only block actual data, allow schema
+*.sqlite
+*.db
+backup.sql
+database_backup.sql
+
+# Sensitive Files
+auth.json
+
+# User Uploads & Generated Files
+/public/storage/
+/public/hot
+/public/uploads/
+/public/resumes/
+/public/temp/
+
+# Cache & Compiled
+/bootstrap/cache/*.php
+/.phpunit.cache
+
+# System Files
+Thumbs.db
+.directory
+
+# ============================================================
+# DEVELOPMENT FILES - Never deploy to production
+# ============================================================
+test-*.php
+*-test.php
+debug-*.php
+clean-*.php
+create_*.php
+generate_*.php
+update_*.php
+*.sql
+*.sql.gz
+*.bak
+*.backup
+*.old
+*.orig
+*.log
+error_log
+
+# Backup files
+*.tar.gz
+*.zip
+*.rar

@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'USD' => 'U.S. Dollar',
+    'AUD' => 'Australian Dollar',
+    'BRL' => 'Brazilian Real',
+    'CAD' => 'Canadian Dollar',
+    'CZK' => 'Czech Koruna',
+    'RUB' => 'Russian ruble',
+    'DKK' => 'Danish Krone',
+    'EUR' => 'Euro',
+    'MYR' => 'Malaysian Ringgit',
+    'PHP' => 'Philippine Peso',
+    'PLN' => 'Polish Zloty',
+    'GBP' => 'Pound Sterling',
+    'SGD' => 'Singapore Dollar',
+    'SEK' => 'Swedish Krona',
+    'CHF' => 'Swiss Franc',
+    'TRY' => 'Turkish Lira',
+    'TWD' => 'Taiwan New Dollar',
+    'THB' => 'Thai Baht',
+    'HKD' => 'Hong Kong Dollar',
+    'HUF' => 'Hungarian Forint',
+    'ILS' => 'Israeli New Sheqel',
+    'JPY' => 'Japanese Yen',
+    'MXN' => 'Mexican Peso',
+    'NOK' => 'Norwegian Krone',
+    'NZD' => 'New Zealand Dollar',
+    
+];

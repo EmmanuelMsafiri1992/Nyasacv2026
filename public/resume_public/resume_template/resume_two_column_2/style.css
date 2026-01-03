@@ -1,0 +1,345 @@
+
+#rb-layout {
+  width: 100%;
+  max-width: 210mm;
+  background: #ffffff;
+  padding: 0;
+  box-shadow: 0 10px 40px rgba(0,0,0,.12);
+  position: relative;
+  overflow: hidden;
+}
+
+#rb-layout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #17a2b8 0%, #20c997 50%, #17a2b8 100%);
+  z-index: 10;
+}
+
+#rb-main{
+font-family: 'Poppins', 'Open Sans', sans-serif;
+font-size: 14px;
+line-height: 1.6;
+display: flex;
+flex-wrap: nowrap;
+}
+
+#rb-left .rb-block{
+margin-bottom: 30px
+}
+
+#rb-left {
+  width: 35%;
+  padding: 40px 30px;
+  color: #fff;
+  background: linear-gradient(180deg, #0d6e75 0%, #0a5a5f 100%)!important;
+  position: relative;
+}
+
+#rb-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #20c997 0%, #17a2b8 100%);
+}
+
+#rb-content {
+  width: 65%;
+  background: #fff;
+  padding: 40px 35px;
+}
+
+#rb-content .rb-content-main{
+  padding: 0;
+  margin-top: 30px;
+}
+
+#rb-content-top{
+  color: #2c3e50;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+#rb-content .rb-block {
+  position: relative;
+  padding: 5px 10px;
+}
+#rb-left .rb-box-content {
+padding-bottom: 0;
+margin:0;
+}
+.skill{
+margin-top: 15px
+}
+
+#rb-content-top h1{
+  font-size: 42px;
+  margin: 0 0 12px 0;
+  padding: 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #2c3e50;
+  position: relative;
+  display: inline-block;
+}
+
+#rb-content-top h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #17a2b8 0%, #20c997 100%);
+  border-radius: 2px;
+}
+
+#rb-content-top h1 span{
+  display: block;
+  background: linear-gradient(135deg, #17a2b8 0%, #20c997 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#rb-content-top h2{
+  margin: 20px 0 0 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: #6c757d;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.box-name p{		
+  overflow: hidden;
+}
+.box-name{		
+overflow: hidden;
+background: #2f3a40;
+}
+#rb-content p{
+margin-bottom: 5px
+}
+#rb-left .h3{
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.95);
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#rb-left .h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(32, 201, 151, 0.5);
+}
+
+#rb-content .head{
+  font-size: 20px;
+  color: #2c3e50;
+  padding: 0 0 15px 0;
+  border-bottom: 3px solid #f8f9fa;
+  font-weight: 700;
+  margin: 30px 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+#rb-content .head::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #17a2b8 0%, #20c997 100%);
+}
+
+
+#rb-content h3{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#rb-left .h3 span{
+padding: 0px 15px;
+}
+#rb-content span[contenteditable]{
+display: inline-block;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+#rb-left .h3:first-child{
+margin-top: 0
+}
+.rb-box-content{
+  margin-bottom: 25px;
+  padding: 20px;
+  position: relative;
+  background: #ffffff;
+  border-left: 3px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#rb-content .rb-box-content {
+  background: #f8f9fa;
+  border-left-color: #17a2b8;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#rb-content .rb-box-content:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(23, 162, 184, 0.15);
+}
+
+#rb-left .rb-box-content {
+  padding: 0;
+  background: transparent;
+}
+
+#rb-box-ava{
+  text-align: center;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+#rb-box-ava img{
+  padding: 0;
+  border: 5px solid rgba(32, 201, 151, 0.3);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+#rb-box-ava img:hover {
+  transform: scale(1.05);
+}
+.bar-exp span {
+  display:block;
+  height: 8px;
+  background: #d9d9d9;
+}
+.bar-exp{
+background: #2f3a40;
+border: solid 2px white;
+  margin-bottom: 12px;
+}
+.icoweb label{
+display: block;
+color:#627e88;
+}
+.icoweb span{
+display: block;
+}
+
+.box-contact{
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+.box-contact p {
+  margin-bottom: 15px;
+  padding-left: 35px;
+  position: relative;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.5;
+}
+
+.icoweb i.fa{
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 13px;
+  color: #ffffff!important;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.head i{
+  font-size: 24px;
+  margin-right: 15px;
+  color: #17a2b8;
+  vertical-align: middle;
+}
+.exp-content{
+  padding: 0;
+  margin-top: 10px;
+  color: #6c757d;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+#rb-content span.exp-date {
+  display: inline-block;
+  background: linear-gradient(135deg, #e9f7f9 0%, #e1f5f2 100%);
+  color: #17a2b8;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#rb-content span.exp-date em {
+  font-style: normal;
+}
+
+#rb-content .h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #495057;
+  margin: 8px 0;
+}
+.icon_fa{
+text-align: center;
+}
+.icon_fa i.fa{
+font-size: 20px;
+border: solid 1px #ffffff;
+border-radius: 50%;
+padding: 5px;
+width: 20px;
+color: white;
+background: #ffffff;
+margin-bottom: 5px;
+}
+p.head i.fa{float:left}

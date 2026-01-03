@@ -1,0 +1,181 @@
+/* ============================================
+   GOOGLE ADSENSE RESPONSIVE FIX
+   Prevents ads from causing horizontal overflow
+   ============================================ */
+
+/* Fix ALL Google AdSense containers */
+[id*="aswift"],
+[id*="google_ads"],
+[class*="adsbygoogle"],
+div[id^="aswift"],
+div[id$="_host"] {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* Fix Google AdSense iframes */
+iframe[id*="aswift"],
+iframe[name*="aswift"],
+iframe[id*="google_ads"] {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+/* Mobile specific ad fixes */
+@media (max-width: 767.98px) {
+
+    /* Force all ad containers to fit viewport */
+    [id*="aswift"],
+    [id*="google_ads"],
+    [class*="adsbygoogle"] {
+        max-width: calc(100vw - 30px) !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    /* Fix ad host containers */
+    div[id$="_host"] {
+        max-width: calc(100vw - 30px) !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        display: block !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    /* Fix ad iframes */
+    iframe[id*="aswift"] {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        left: 0 !important;
+        right: 0 !important;
+        position: relative !important;
+    }
+
+    /* Center ads on mobile */
+    ins.adsbygoogle {
+        max-width: calc(100vw - 30px) !important;
+        width: 100% !important;
+        display: block !important;
+        margin: 1rem auto !important;
+        text-align: center !important;
+    }
+
+    /* If ads are in a wrapper */
+    .ad-wrapper,
+    .ad-container,
+    [class*="ad-"] {
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        padding: 0 15px !important;
+    }
+}
+
+/* Tablet ad fixes */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    [id*="aswift"],
+    [class*="adsbygoogle"] {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    iframe[id*="aswift"] {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* Additional fixes for ad positioning */
+@media (max-width: 767.98px) {
+
+    /* Fix any absolutely positioned ads */
+    [id*="aswift"][style*="position: absolute"] {
+        position: relative !important;
+        left: 0 !important;
+        transform: none !important;
+    }
+
+    /* Ensure ad scripts don't create overflow */
+    script[src*="adsbygoogle"],
+    script[src*="googlesyndication"] {
+        display: none !important;
+    }
+
+    /* Hide ads that are too wide */
+    [id*="aswift"][style*="width: 408px"],
+    [id*="aswift"][style*="width: 468px"],
+    [id*="aswift"][style*="width: 728px"],
+    [id*="aswift"][style*="width: 970px"] {
+        max-width: 100% !important;
+        width: calc(100vw - 30px) !important;
+    }
+}
+
+/* Make sure parent containers don't overflow */
+body > div:has([id*="aswift"]),
+body > div:has([class*="adsbygoogle"]) {
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* Fix for ads in content areas */
+.container [id*="aswift"],
+.container [class*="adsbygoogle"],
+article [id*="aswift"],
+article [class*="adsbygoogle"],
+section [id*="aswift"],
+section [class*="adsbygoogle"] {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 1rem auto !important;
+}
+
+/* Responsive ad sizes */
+@media (max-width: 375px) {
+    /* Extra small phones */
+    [id*="aswift"] {
+        max-width: calc(100vw - 20px) !important;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 767.98px) {
+    /* Small phones */
+    [id*="aswift"] {
+        max-width: calc(100vw - 30px) !important;
+    }
+}
+
+/* Prevent ad overflow animation issues */
+[id*="aswift"],
+[class*="adsbygoogle"] {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Make sure ads load responsive */
+.adsbygoogle[data-ad-format="auto"] {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.adsbygoogle[data-ad-format="fluid"] {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Fix for sticky/fixed ads */
+[id*="aswift"][style*="position: fixed"],
+[id*="aswift"][style*="position: sticky"] {
+    max-width: calc(100vw - 30px) !important;
+    left: 15px !important;
+    right: 15px !important;
+}

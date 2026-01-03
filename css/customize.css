@@ -1,0 +1,237 @@
+#headerMenuCollapse {
+	border-bottom: none;
+}
+
+.py-5 {
+	border-bottom: none;
+	box-shadow: 0 2px 2px -2px gray;
+	padding-bottom: 50px !important;
+}
+
+.header-top {
+	margin-bottom: 50px;
+}
+
+.btn-top a {
+	margin-right: 15px;
+}
+
+.card-img-top {
+	width: 100%;
+	height: auto;
+	max-height: 400px;
+	object-fit: scale-down;
+}
+.resume-premium::before{
+/* before */
+	right: 100%;
+    bottom: 0;
+    border-width: 0 0 12px 12px;
+	position: absolute;
+	border-color: transparent transparent #5462FB transparent;
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	z-index: 0;
+}
+
+.resume-premium{
+	list-style: none outside;
+	text-transform: capitalize;
+	font-weight: 400;
+	text-align: left;
+	letter-spacing: 1px;
+	line-height: 1;
+	z-index: 9;
+	white-space: normal;
+	font-family: 'Lato', sans-serif;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 15px;
+	margin-right: 8px;
+	background: #5462FB;
+	color: #ffffff;
+	font-size: 16px;
+} 
+.resume-premium::after{
+	/* before */
+	border-color: transparent #5462FB transparent transparent;
+	right: 100%;
+    top: 0;
+    border-width: 0 12px 12px 0;
+	position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    z-index: 0;
+}
+
+.list_teamplate .card {
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+	margin: 0 0 10px;
+	cursor: pointer;
+	transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+	border-radius: 4px;
+	overflow: hidden
+}
+
+.list_teamplate .card:hover {
+	border: 3px solid #467FCF;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+}
+
+#gjs {
+	border: none;
+}
+
+#gjs-sm-extra {
+	display: none !important;
+}
+
+#gjs-sm-general {
+	display: none !important;
+	;
+}
+
+#gjs-sm-dimension {
+	display: none !important;
+	;
+}
+
+.gjs-clm-tags {
+	display: none;
+}
+
+.gjs-rte-action:last-child {
+	display: none;
+}
+
+
+/* Theming */
+
+
+/* Primary color for the background */
+
+.gjs-one-bg {
+	background-color: #3074CE;
+}
+
+
+/* Secondary color for the text color */
+
+.gjs-two-color {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Tertiary color for the background */
+
+.gjs-three-bg {
+	background-color: #3074CE;
+	color: white;
+}
+
+
+/* Quaternary color for the text color */
+
+.gjs-four-color,
+.gjs-four-color-h:hover {
+	color: black;
+}
+
+.panel__top {
+	padding: 0;
+	width: 100%;
+	display: flex;
+	position: initial;
+	justify-content: center;
+	justify-content: space-between;
+}
+
+.panel__basic-actions {
+	position: initial;
+}
+
+.gjs-pn-panels .gjs-pn-commands {
+	height: 50px;
+}
+
+.gjs-pn-panels .gjs-pn-views {
+	height: 50px;
+}
+
+.gjs-pn-panels .gjs-pn-myNewPanel {
+	min-width: 550px;
+}
+
+.gjs-pn-panels .gjs-pn-myNewPanel .input-group-btn {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.purchase_install {
+	margin-top: 10px;
+}
+
+.list_teamplate .card {
+	width: 20rem;
+}
+
+.purchase_code span {
+	font-size: 14px;
+}
+.section-description {
+    color: rgba(52,53,65,.6);
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+.more-template{
+    text-transform: uppercase;
+    margin-top:40px;
+    font-weight: bold;
+}
+  .categories-link:hover {
+    background-color: #316CBE;
+    color: #fff;
+}
+  .categories-item {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.categories-link {
+    background-color: #e7eff3;
+    border-radius: 4px;
+    color: #576274;
+    display: block;
+    font-size: .8125rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-decoration: none !important;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.categories-link-isCurrent{
+    background-color: #316CBE;
+    color: #fff;
+}
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #316CBE;
+    border-color: #316CBE;
+}

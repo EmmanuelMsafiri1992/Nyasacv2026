@@ -1,0 +1,297 @@
+/* ============================================
+   NAVIGATION FIX - TOP RIGHT POSITIONING
+   ============================================ */
+
+/* Desktop Navigation - Always visible on large screens */
+@media (min-width: 768px) {
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+
+    .nav-ultra .d-none.d-md-flex {
+        display: flex !important;
+    }
+}
+
+/* CRITICAL: Override Bootstrap d-none when menu is active */
+.mobile-menu-active.d-none {
+    display: flex !important;
+}
+
+div.mobile-menu-active.d-none {
+    display: flex !important;
+}
+
+/* Mobile Navigation - Hamburger menu for small screens */
+@media (max-width: 767.98px) {
+
+    /* Navigation container */
+    .nav-ultra {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        backdrop-filter: blur(10px) !important;
+        padding: 0.75rem 0 !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .nav-ultra .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin: 0 !important;
+    }
+
+    /* CRITICAL: Force logo and hamburger on same row */
+    .nav-ultra .container > .d-flex {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        flex-wrap: nowrap !important;
+        gap: 0.5rem !important;
+    }
+
+    /* Logo on left - prevent wrapping */
+    .nav-logo {
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        font-size: 1.125rem !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+        white-space: nowrap !important;
+        max-width: calc(100% - 60px) !important;
+    }
+
+    .nav-logo img {
+        height: 32px !important;
+        width: auto !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Truncate logo text if needed */
+    .nav-logo {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* Mobile Menu Toggle Button - TOP RIGHT */
+    .mobile-menu-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        background: transparent !important;
+        border: 2px solid #667eea !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-left: auto !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        position: relative !important;
+        z-index: 10001 !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .mobile-menu-toggle:hover {
+        background: #667eea !important;
+        border-color: #667eea !important;
+    }
+
+    .mobile-menu-toggle svg {
+        width: 24px !important;
+        height: 24px !important;
+        stroke: #667eea !important;
+        stroke-width: 2.5 !important;
+        transition: stroke 0.3s ease !important;
+    }
+
+    .mobile-menu-toggle:hover svg {
+        stroke: white !important;
+    }
+
+    .mobile-menu-toggle.active {
+        background: #667eea !important;
+        border-color: #667eea !important;
+    }
+
+    .mobile-menu-toggle.active svg {
+        stroke: white !important;
+    }
+
+    /* Hide desktop menu by default */
+    .nav-ultra .d-none.d-md-flex {
+        display: none !important;
+        position: fixed !important;
+        top: 65px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        background: white !important;
+        flex-direction: column !important;
+        padding: 1rem 0 !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+        z-index: 9998 !important;
+        max-height: calc(100vh - 65px) !important;
+        overflow-y: auto !important;
+        animation: slideDown 0.3s ease-out !important;
+    }
+
+    /* Show mobile menu when active - MAXIMUM SPECIFICITY */
+    .nav-ultra .d-none.d-md-flex.mobile-menu-active,
+    .nav-ultra .mobile-menu-active.d-none.d-md-flex,
+    nav.nav-ultra .d-none.d-md-flex.mobile-menu-active,
+    .mobile-menu-active.d-none,
+    .mobile-menu-active.d-md-flex {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Force show when mobile-menu-active is present */
+    body .nav-ultra .mobile-menu-active {
+        display: flex !important;
+    }
+
+    /* Mobile menu items styling */
+    .nav-ultra .mobile-menu-active .nav-link-ultra {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 1rem 1.5rem !important;
+        margin: 0 !important;
+        display: block !important;
+        color: #4a5568 !important;
+        font-size: 1rem !important;
+        border-radius: 0 !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .nav-ultra .mobile-menu-active .nav-link-ultra:hover {
+        background: #f7fafc !important;
+        color: #667eea !important;
+    }
+
+    .nav-ultra .mobile-menu-active .btn-ultra {
+        width: 90% !important;
+        max-width: 300px !important;
+        margin: 1rem auto !important;
+        display: block !important;
+        text-align: center !important;
+        padding: 1rem 2rem !important;
+    }
+
+    /* Backdrop overlay */
+    body.menu-open::before {
+        content: '' !important;
+        position: fixed !important;
+        top: 65px !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background: rgba(0, 0, 0, 0.5) !important;
+        z-index: 9997 !important;
+        animation: fadeIn 0.3s ease-out !important;
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden !important;
+    }
+
+    /* Add padding to body to account for fixed nav */
+    body {
+        padding-top: 65px !important;
+    }
+
+    /* Hero section adjustment */
+    .hero-ultra {
+        margin-top: 0 !important;
+        padding-top: 3rem !important;
+    }
+
+    /* ULTRA CRITICAL: Final override for mobile menu display */
+    .nav-ultra .mobile-menu-active {
+        display: flex !important;
+        visibility: visible !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    /* Override any Bootstrap classes */
+    .mobile-menu-active.d-none.d-md-flex,
+    .d-none.d-md-flex.mobile-menu-active,
+    .d-none.mobile-menu-active {
+        display: flex !important;
+    }
+}
+
+/* Tablet Navigation - Medium screens */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .nav-ultra .d-none.d-md-flex {
+        display: flex !important;
+        gap: 0.5rem !important;
+    }
+
+    .nav-link-ultra {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    .btn-ultra {
+        padding: 0.625rem 1.25rem !important;
+        font-size: 0.875rem !important;
+    }
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Ensure navigation stays on top */
+.nav-ultra {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+}
+
+/* Make sure content doesn't hide behind nav */
+body {
+    padding-top: 80px;
+}
+
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 65px !important;
+    }
+}

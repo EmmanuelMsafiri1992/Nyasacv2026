@@ -1,0 +1,834 @@
+/* ============================================
+   MOBILE RESPONSIVE FIX - NYASACV
+   Comprehensive mobile optimization
+   ============================================ */
+
+/* Box-sizing for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* MOBILE ONLY: Aggressive horizontal scroll fix */
+@media (max-width: 767.98px) {
+    html {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        position: relative;
+    }
+
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        position: relative;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Prevent ALL elements from causing horizontal scroll on mobile */
+    * {
+        max-width: 100vw !important;
+    }
+
+    /* Prevent horizontal scrolling from any element on mobile */
+    .page, .container, .row, section, div, header, footer, main {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .container {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    img, video, iframe, svg {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Fix rows that cause overflow on mobile */
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100% !important;
+    }
+
+    /* Force all positioned elements to stay within viewport on mobile */
+    [style*="position: absolute"],
+    [style*="position: fixed"],
+    [class*="position-absolute"],
+    [class*="position-fixed"] {
+        max-width: 100vw !important;
+    }
+
+    /* Fix hero section overflow on mobile */
+    .hero-ultra {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+        width: 100% !important;
+    }
+
+    .hero-ultra .container {
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+    }
+
+    .hero-ultra .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Fix stats that might overflow on mobile */
+    .stats-ultra {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Fix mockup container on mobile */
+    .hero-mockup-container {
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .mockup-stack {
+        max-width: 100% !important;
+        position: relative !important;
+    }
+
+    /* CRITICAL: Hide floating badges on mobile */
+    .floating-badge {
+        display: none !important;
+    }
+
+    /* Fix any element with transform that might cause overflow on mobile */
+    [style*="transform"] {
+        transform: none !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* CRITICAL: Fix elements that commonly cause overflow */
+    [style*="right: -"] {
+        right: 0 !important;
+    }
+
+    /* Fix specific badge classes */
+    .badge-1,
+    .badge-2,
+    .badge-3 {
+        right: 0 !important;
+    }
+
+    /* Force hide ALL floating badges on mobile */
+    .floating-badge,
+    .badge-1,
+    .badge-2,
+    .badge-3,
+    [class*="floating-badge"],
+    [class*="badge-"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    /* Fix hero section pseudo elements that cause overflow */
+    .hero-ultra::before,
+    .hero-ultra::after,
+    .cta-ultra::before,
+    .floating-element {
+        display: none !important;
+        right: 0 !important;
+        left: 0 !important;
+    }
+
+    /* Contain mockup cards within viewport */
+    .mockup-card {
+        transform: none !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0 auto !important;
+    }
+
+    .mockup-1,
+    .mockup-2,
+    .mockup-3 {
+        transform: none !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    /* Fix mockup container negative margin */
+    .hero-mockup-container {
+        margin-top: 2rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    /* Fix section padding */
+    .section-ultra,
+    section {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Prevent negative margins from causing overflow */
+    .row > *,
+    .col,
+    [class*="col-"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Fix any absolutely positioned elements */
+    .position-absolute,
+    [style*="position: absolute"] {
+        left: auto !important;
+        right: auto !important;
+    }
+
+    /* Fix slider controls */
+    .slider-prev {
+        left: 10px !important;
+        right: auto !important;
+    }
+
+    .slider-next {
+        right: 10px !important;
+        left: auto !important;
+    }
+
+    /* Ensure pricing featured badge doesn't overflow */
+    .pricing-featured::after {
+        display: none !important;
+    }
+
+    /* Fix chat widget if present */
+    [class*="chat"],
+    [id*="chat"] {
+        right: 10px !important;
+        max-width: calc(100vw - 20px) !important;
+    }
+}
+
+/* ============================================
+   MOBILE BREAKPOINTS
+   ============================================ */
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Navigation */
+    .nav-ultra {
+        padding: 0.75rem 0;
+    }
+
+    .nav-logo {
+        font-size: 1.25rem;
+        gap: 0.5rem;
+    }
+
+    .nav-logo img {
+        height: 30px !important;
+    }
+
+    .nav-link-ultra {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .btn-ultra {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.875rem;
+    }
+
+    /* Hero Section */
+    .hero-ultra {
+        min-height: auto;
+        padding: 6rem 0 3rem;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .hero-title-ultra {
+        font-size: 1.75rem !important;
+        line-height: 1.2;
+        margin: 1rem 0;
+    }
+
+    .hero-subtitle-ultra {
+        font-size: 0.9375rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    /* Hero Buttons */
+    .hero-ultra .btn-ultra {
+        padding: 0.875rem 1.5rem !important;
+        font-size: 0.9375rem !important;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero-ultra .d-flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+
+    /* Stats Section */
+    .stats-ultra {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        padding: 2rem 1.5rem !important;
+        margin: 0 0.5rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem !important;
+    }
+
+    .stat-label {
+        font-size: 0.9375rem !important;
+    }
+
+    /* Hero Mockup */
+    .hero-mockup-container {
+        height: 350px !important;
+        margin-top: 2rem !important;
+        padding: 0 1rem;
+    }
+
+    .mockup-stack {
+        max-width: 250px !important;
+        height: 350px !important;
+    }
+
+    .mockup-2 {
+        transform: translateX(-15px) translateY(15px) rotate(-3deg) scale(0.95) !important;
+    }
+
+    .mockup-3 {
+        transform: translateX(-30px) translateY(30px) rotate(-6deg) scale(0.9) !important;
+    }
+
+    /* Hide floating badges on mobile - they cause overflow */
+    .floating-badge {
+        display: none !important;
+    }
+
+    .floating-element {
+        display: none !important;
+    }
+
+    /* Sections */
+    .section-ultra {
+        padding: 3rem 0 !important;
+    }
+
+    .section-title-ultra {
+        font-size: 1.75rem !important;
+        line-height: 1.3;
+        padding: 0 1rem;
+    }
+
+    .section-subtitle-ultra {
+        font-size: 1rem !important;
+        padding: 0 1rem;
+        margin-bottom: 2rem !important;
+    }
+
+    /* Feature Cards */
+    .feature-card-ultra {
+        padding: 1.5rem !important;
+        margin-bottom: 1.5rem;
+    }
+
+    .feature-icon-ultra {
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .feature-icon-ultra svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .feature-title-ultra {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.75rem;
+    }
+
+    .feature-description-ultra {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+    }
+
+    /* Template Cards */
+    .template-card-ultra {
+        margin-bottom: 1.5rem;
+    }
+
+    .template-name {
+        font-size: 1.125rem !important;
+    }
+
+    /* Pricing Cards */
+    .pricing-card-ultra {
+        padding: 2rem 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .price-amount {
+        font-size: 2.5rem !important;
+    }
+
+    .price-amount sup {
+        font-size: 1.25rem !important;
+    }
+
+    /* CTA Section */
+    .cta-ultra {
+        padding: 3rem 1.5rem !important;
+        margin: 0 0.5rem;
+        border-radius: 1rem !important;
+    }
+
+    .cta-title {
+        font-size: 1.75rem !important;
+    }
+
+    .cta-subtitle {
+        font-size: 1rem !important;
+    }
+
+    /* Footer */
+    .footer-ultra {
+        padding: 3rem 0 1.5rem !important;
+        margin-top: 3rem !important;
+    }
+
+    /* Containers */
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Forms */
+    .form-modern {
+        padding: 1.5rem !important;
+    }
+
+    .form-input-modern {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    /* Cards */
+    .card-modern {
+        padding: 1.5rem !important;
+    }
+
+    /* Testimonial */
+    .testimonial-ultra {
+        padding: 2rem 1.5rem !important;
+        margin: 0 0.5rem;
+    }
+
+    .testimonial-text {
+        font-size: 1.125rem !important;
+    }
+
+    .testimonial-avatar {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-title-ultra {
+        font-size: 2rem !important;
+    }
+
+    .hero-subtitle-ultra {
+        font-size: 1rem;
+    }
+
+    .stats-ultra {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5rem !important;
+        padding: 2rem !important;
+    }
+
+    .mockup-stack {
+        max-width: 300px !important;
+        height: 400px !important;
+    }
+
+    .hero-mockup-container {
+        height: 450px !important;
+        margin-top: 2rem !important;
+    }
+
+    .floating-badge {
+        display: none !important;
+    }
+
+    .section-title-ultra {
+        font-size: 2rem !important;
+    }
+
+    .feature-card-ultra {
+        padding: 2rem !important;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-title-ultra {
+        font-size: 2.5rem !important;
+    }
+
+    .stats-ultra {
+        grid-template-columns: repeat(3, 1fr) !important;
+        padding: 2.5rem !important;
+    }
+
+    .mockup-stack {
+        max-width: 350px !important;
+        height: 450px !important;
+    }
+
+    .hero-mockup-container {
+        height: 500px !important;
+        margin-top: 2rem !important;
+    }
+
+    .floating-badge {
+        padding: 10px 16px;
+        font-size: 0.8125rem;
+    }
+
+    .badge-1, .badge-2, .badge-3 {
+        right: 0 !important;
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero-mockup-container {
+        margin-top: -200px !important;
+    }
+
+    .stats-ultra {
+        padding: 2.5rem !important;
+    }
+}
+
+/* ============================================
+   FIX SPECIFIC OVERFLOW ISSUES
+   ============================================ */
+
+/* Fix Bootstrap Row Overflow */
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col, [class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 575.98px) {
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .col, [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Fix Tables */
+@media (max-width: 767.98px) {
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Fix Images */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix GrapeJS Editor Panel */
+@media (max-width: 767.98px) {
+    .gjs-pn-panels .gjs-pn-myNewPanel {
+        min-width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .gjs-pn-commands, .gjs-pn-views {
+        flex-wrap: wrap;
+    }
+}
+
+/* Fix Card Images */
+.card-img-top {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+}
+
+@media (max-width: 767.98px) {
+    .card-img-top {
+        max-height: 250px;
+    }
+}
+
+/* Fix List Template Cards */
+.list_teamplate .card {
+    width: 100% !important;
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    .list_teamplate .card {
+        width: auto !important;
+        max-width: 20rem;
+    }
+}
+
+/* ============================================
+   MOBILE MENU
+   ============================================ */
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: #4a5568;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.mobile-menu-toggle svg {
+    width: 28px;
+    height: 28px;
+    stroke-width: 2.5;
+}
+
+.mobile-menu-toggle:hover {
+    color: var(--primary, #667eea);
+}
+
+@media (max-width: 767.98px) {
+    /* Show mobile menu toggle button */
+    .mobile-menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hide desktop menu by default */
+    .nav-ultra .d-none.d-md-flex {
+        display: none !important;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column !important;
+        padding: 1.5rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        z-index: 9998;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    /* Show mobile menu when active */
+    .nav-ultra .d-none.d-md-flex.mobile-menu-active {
+        display: flex !important;
+    }
+
+    /* Mobile menu items */
+    .nav-ultra .mobile-menu-active .nav-link-ultra,
+    .nav-ultra .mobile-menu-active .btn-ultra {
+        width: 100%;
+        text-align: center;
+        padding: 1rem !important;
+        margin: 0.25rem 0;
+        display: block;
+    }
+
+    .nav-ultra .mobile-menu-active .nav-link-ultra {
+        border-radius: 8px;
+    }
+
+    .nav-ultra .mobile-menu-active .btn-ultra {
+        margin-top: 1rem;
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* Mobile menu overlay */
+    body.menu-open::before {
+        content: '';
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9997;
+        animation: fadeIn 0.3s ease-out;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Reduce animations on mobile for better performance */
+@media (max-width: 767.98px) {
+    * {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.2s !important;
+    }
+
+    .animate-on-scroll,
+    .float-animation,
+    [data-aos] {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Optimize backdrop filters on mobile */
+@media (max-width: 767.98px) {
+    .nav-ultra,
+    .glass-effect,
+    [style*="backdrop-filter"] {
+        backdrop-filter: none !important;
+    }
+}
+
+/* ============================================
+   TEXT READABILITY
+   ============================================ */
+
+@media (max-width: 575.98px) {
+    body {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    h4 {
+        font-size: 1.125rem;
+        line-height: 1.4;
+    }
+
+    h5, h6 {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+/* ============================================
+   LOADING OPTIMIZATION
+   ============================================ */
+
+/* Lazy load images */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Preload critical resources */
+.hero-ultra::before {
+    content-visibility: auto;
+}
+
+/* Reduce complexity of shadows on mobile */
+@media (max-width: 767.98px) {
+    [class*="shadow"],
+    .card,
+    .btn {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    }
+}
