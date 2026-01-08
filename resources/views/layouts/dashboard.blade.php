@@ -297,6 +297,10 @@
                 <i class="fe fe-plus-circle"></i>
                 <span>@lang('Create Resume')</span>
             </a>
+            <a href="{{ route('resume.ai.index') }}" class="sidebar-nav-item {{ request()->routeIs('resume.ai.*') ? 'active' : '' }}">
+                <i class="fe fe-cpu"></i>
+                <span>@lang('AI Assistant')</span>
+            </a>
             <a href="{{ route('templates') }}" class="sidebar-nav-item {{ request()->routeIs('templates') ? 'active' : '' }}">
                 <i class="fe fe-layout"></i>
                 <span>@lang('Templates')</span>

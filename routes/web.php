@@ -14,6 +14,7 @@ use App\Http\Controllers\EmailCampaignController;
 use App\Http\Controllers\EmailTemplateController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\AdminEmailController;
+use App\Http\Controllers\ResumeAiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -141,6 +142,20 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('delete/{resume}', [ResumeController::class, 'delete'])->name('resume.delete');
         Route::get('edit/{resume}', [ResumeController::class, 'getEditResume'])->name('resume.edit');
         Route::post('edit', [ResumeController::class, 'postEditResume'])->name('resume.update');
+
+        // AI Resume Assistant
+        Route::prefix('ai')->name('ai.')->group(function () {
+            Route::get('/', [ResumeAiController::class, 'index'])->name('index');
+            Route::post('generate-summary', [ResumeAiController::class, 'generateSummary'])->name('generate-summary');
+            Route::post('generate-bullets', [ResumeAiController::class, 'generateBulletPoints'])->name('generate-bullets');
+            Route::post('suggest-skills', [ResumeAiController::class, 'suggestSkills'])->name('suggest-skills');
+            Route::post('enhance-bullet', [ResumeAiController::class, 'enhanceBulletPoint'])->name('enhance-bullet');
+            Route::post('generate-cover-letter', [ResumeAiController::class, 'generateCoverLetter'])->name('generate-cover-letter');
+            Route::get('industries', [ResumeAiController::class, 'getIndustries'])->name('industries');
+            Route::get('job-titles', [ResumeAiController::class, 'getJobTitles'])->name('job-titles');
+            Route::get('job-titles/search', [ResumeAiController::class, 'searchJobTitles'])->name('job-titles.search');
+            Route::post('mark-used', [ResumeAiController::class, 'markUsed'])->name('mark-used');
+        });
     });
 
     // Chat routes for users
